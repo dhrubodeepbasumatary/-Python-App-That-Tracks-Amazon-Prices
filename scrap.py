@@ -70,23 +70,26 @@ def check_price():
 
 
 def send_mail():
-	server=smtplib.SMTP('smtp.gmail.com',587)
-	server.ehlo()
-	server.starttls()
-	server.ehlo()
-
-	server.login('dabc@gmail.com','')
-
-	subject='Price fell down'
-    body='check the amazon link'
-
-    msg=f"Subject:{subject}\n\n{body}"
-    
+    server=smtplib.SMTP('smtp.gmail.com',587)
+    server.ehlo()
+    server.starttls()
+    server.ehlo()
+   # server.login('dohnking123@gmail.com','11thmission')
+   # subject='Price fell down https://www.amazon.in/Fujifilm-Instax-Instant-Camera-Grape/dp/B00R17NEJE/ref=sr_1_8?crid=1OZ45JGC5QO6N&keywords=fujifilm+instax+mini+9&qid=1568361632&sprefix=fujifilm%2Caps%2C1004&sr=8-8'
+   # body='check the amazon link '
+   # msg=f"Subject:{subject}\n\n{body}"    server=smtplib.SMTP('smtp.gmail.com',587)
+    server.login('sender@gmail.com','pass')
+    subject='Price fell down'
+    body='check the amazon link https://www.amazon.in/Fujifilm-Instax-Instant-Camera-Grape/dp/B00R17NEJE/ref=sr_1_8?crid=1OZ45JGC5QO6N&keywords=fujifilm+instax+mini+9&qid=1568361632&sprefix=fujifilm%2Caps%2C1004&sr=8-8 '
+    #msg=f"Subject:{subject}\n\n{body}"
     server.sendmail(
-     'dabc@gmail.com'
-     'xyz@gmail.com'
-      msg
+        'sender@gmail.com',
+        'receiver@gmail.com',
+         body
     )
     print('email has been send')
-
     server.quit()
+
+
+
+check_price()
