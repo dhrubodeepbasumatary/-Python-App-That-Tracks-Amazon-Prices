@@ -75,7 +75,7 @@ def send_mail():
 	server.starttls()
 	server.ehlo()
 
-	server.login('dohnking123@gmail.com','')
+	server.login('dabc@gmail.com','')
 
 	subject='Price fell down'
     body='check the amazon link'
@@ -83,8 +83,8 @@ def send_mail():
     msg=f"Subject:{subject}\n\n{body}"
     
     server.sendmail(
-     'dohnking123@gmail.com'
-     'dhrubodeepbasumatary123@gmail.com'
+     'dabc@gmail.com'
+     'xyz@gmail.com'
       msg
     )
     print('email has been send')
